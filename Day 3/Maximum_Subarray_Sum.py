@@ -37,12 +37,23 @@ class Solution:
 # Current Subarray Sum: The maximum sum of a subarray that ends at the current index. 
 # Maximum Sum So Far: The overall maximum sum encountered during the entire traversal.
 
-        max_sum = float('-inf')
-        current_sum = 0
-        for num in nums:
-            current_sum = max(0, current_sum + num)
-            max_sum = max(current_sum, max_sum)
+        # max_sum = float('-inf')
+        # current_sum = 0
+        # for num in nums:
+        #     current_sum = max(0, current_sum + num)
+        #     max_sum = max(current_sum, max_sum)
 
+        # without using max to reduce runtime
+        current_sum = 0
+        max_sum = nums[0]
+        for num in nums:
+            if current_sum < 0:
+                current_sum = 0
+            
+            current_sum += num
+            if max_sum < current_sum:
+                max_sum = current_sum
+                
         return max_sum       
 
 s1 = Solution()
