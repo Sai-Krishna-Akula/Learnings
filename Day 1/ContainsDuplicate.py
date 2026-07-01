@@ -33,10 +33,7 @@ class Solution:
             if nums[i] in numMap:
                 return True
             numMap[nums[i]] = i
-                
         return False
-
-
 
 s1 = Solution()
 print(s1.containsDuplicate([1,2,3,1]))
