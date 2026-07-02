@@ -14,7 +14,8 @@
 # Output: 1
 from typing import List
 def singleNumber(nums: List) -> int:
-    # Bruteforce approach, create a Hashmap and store the elements and increase their count
+    # Bruteforce approach, create a Hashmap and store the elements and increase their count 
+    # and return the element which is count one in map
     # numMap = {}
     # for num in nums:
     #     numMap[num] = numMap.get(num, 0) + 1
@@ -27,6 +28,7 @@ def singleNumber(nums: List) -> int:
 
     # Optimal Solution using XOR, if a number xor with another number result will be zero
     # xor the number with 0 is the number
+    # works even number of times numbers got repeated
     result = 0
     for num in nums:
         result ^= num
