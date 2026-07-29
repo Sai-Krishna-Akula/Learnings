@@ -22,11 +22,15 @@ def reverseArray(nums: List) -> List:
     
     return nums
 
+
 if __name__ == "__main__":
 
     print(reverseArray([1, 2, 3, 4, 5]))
     print(reverseArray([]))
     print(reverseArray([-1, -2, -4, -3]))
+
+
+
 
 
 
